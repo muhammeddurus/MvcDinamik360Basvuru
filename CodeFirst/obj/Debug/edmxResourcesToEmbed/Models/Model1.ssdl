@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BasvuruProjeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="akaydet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Soyad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Sehir" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpMyProcedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Ad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Soyad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Sehir" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Action" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="BasvuruProjeModelStoreContainer" />
+</Schema>

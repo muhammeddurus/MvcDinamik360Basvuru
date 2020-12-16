@@ -1,0 +1,35 @@
+﻿@using CodeFirst.Models.Class
+@model List<musteri>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Müşteri Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>MÜŞTERİ ID</th>
+        <th>MÜŞTERİ ADI</th>
+        <th>MÜŞTERİ SOYADI</th>
+        <th>ŞEHİR</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+
+    </tr>
+    <tbody>
+        @foreach (var mus in Model)
+        {
+        <tr>
+            <th>@mus.Id</th>
+            <td>@mus.Ad</td>
+            <td>@mus.Soyad</td>
+            <td>@mus.Sehir</td>
+            <td><a href="/Musteri/sil/@mus.Id" class="btn btn-danger">SİL</a> </td>
+            <td><a href="/Musteri/MusteriDetay/@mus.Id" class="btn btn-success">GÜNCELLE</a></td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Musteri/ekle/" class="btn btn-primary">YENİ MÜŞTERİ EKLE</a>

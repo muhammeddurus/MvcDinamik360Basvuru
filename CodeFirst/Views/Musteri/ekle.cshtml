@@ -1,0 +1,33 @@
+﻿@model CodeFirst.Models.Class.musteri
+@{
+    ViewBag.Title = "ekle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:20px">
+        <label>
+            Müşteri Adı
+        </label>
+        @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x=>x.Ad,"",new { @class="color:red"})
+    </div>  
+    <div style="margin-bottom:20px">
+        <label>
+            Müşteri Soyadı
+        </label>
+        @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Soyad, "", new { @class = "color:red" })
+    </div>  
+    <div style="margin-bottom:20px">
+        <label>
+            Yaşadığı Şehir
+        </label>
+        @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Sehir, "", new { @class = "color:red" })
+    </div>
+    <div>
+        <button class="btn btn-warning">Müşteriyi Kaydet</button>
+    </div>
+</form>
+

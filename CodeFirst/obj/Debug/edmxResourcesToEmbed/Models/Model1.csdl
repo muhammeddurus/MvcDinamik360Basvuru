@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BasvuruProjeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BasvuruProjeEntities4" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="akaydet">
+      <Parameter Name="Ad" Mode="In" Type="String" />
+      <Parameter Name="Soyad" Mode="In" Type="String" />
+      <Parameter Name="Sehir" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sil">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpMyProcedure">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Ad" Mode="In" Type="String" />
+      <Parameter Name="Soyad" Mode="In" Type="String" />
+      <Parameter Name="Sehir" Mode="In" Type="String" />
+      <Parameter Name="Action" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
